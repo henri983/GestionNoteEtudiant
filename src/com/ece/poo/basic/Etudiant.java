@@ -88,4 +88,12 @@ public class Etudiant {
     }
 }
 
+    //ajouter etudiant
+    public boolean ajouter_etudiant(){
+        return GestionDB.get_etudiant();
+    }
+    //mettre a jour etudiant
+    public boolean mettre_a_jour_etudiant(){
+        return GestionDB.update_etudiant(this.nom, this.avis, this.moyenne);
+    }
 }

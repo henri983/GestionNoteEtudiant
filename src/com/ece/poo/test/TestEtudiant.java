@@ -2,6 +2,7 @@ package com.ece.poo.test;
 import com.ece.poo.basic.Etudiant;
 import com.ece.poo.basic.Notation;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TestEtudiant {
@@ -17,7 +18,17 @@ public class TestEtudiant {
         etudiant.genereAvis();
         System.out.println("Moyenne:"+ etudiant.getMoyenne());
         System.out.println("Avis:"+ etudiant.getMoyenne());
-
-
+    //creer un nouvel etudiant
+    if (etudiant.ajouter_etudiant()){
+        System.out.println("etudiant ajouter avec succes");
+    }
+    //mettre a jour un etudiant
+        etudiant.setAvis("bien");
+        etudiant.mettre_a_jour_etudiant();
+    //recuperer tous les etudiants
+        ArrayList<Etudiant> allEtudiant = etudiant.recuperer_etudiant();
+    for (Etudiant e : allEtudiant){
+        System.out.println(e);
+    }
     }
 }
